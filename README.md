@@ -1,5 +1,4 @@
 # Kanban Board Test Project
-
 This project is part of a pre-interview test.  
 Due to time constraints and lack of prior experience with some tools, the project is **not fully completed** and currently has some errors (server not running yet).  
 However, I am submitting my progress, project structure, and implementation plan to show my thought process and how I approached the task.
@@ -57,6 +56,3 @@ I am confident that with more time, I would be able to complete the missing feat
 
 ```bash
 npm run dev
-npm ERR! Missing script: "dev"
-npm ERR! To see a list of scripts, run:
-npm ERR!   npm run
