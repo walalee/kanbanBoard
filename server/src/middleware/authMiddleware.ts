@@ -1,6 +1,11 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 
+interface JwtPayload {
+  id: number;
+  email?: string;
+}
+
 export const authMiddleware = (req: Request, res: Response, next: NextFunction) => {
   try {
     const authHeader = req.headers.authorization;
@@ -13,10 +18,10 @@ export const authMiddleware = (req: Request, res: Response, next: NextFunction) 
     const secret = process.env.JWT_SECRET;
     if (!secret) return res.status(500).json({ message: "JWT secret not set" });
 
-    const payload = jwt.verify(token, secret) as any; // { id, email, iat, exp }
+    const payload = jwt.verify(token, secret) as JwtPayload;
     req.user = { id: payload.id, email: payload.email };
     next();
-  } catch (err) {
+  } catch {
     return res.status(401).json({ message: "Invalid token" });
   }
 };
