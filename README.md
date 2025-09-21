@@ -1,73 +1,62 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# Kanban Board Test Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is part of a pre-interview test.  
+Due to time constraints and lack of prior experience with some tools, the project is **not fully completed** and currently has some errors (server not running yet).  
+However, I am submitting my progress, project structure, and implementation plan to show my thought process and how I approached the task.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack (Planned)
+- **Frontend:** React + TypeScript + Tailwind CSS  
+- **Backend:** Node.js + Express + TypeScript  
+- **Database:** PostgreSQL (planned, but not fully set up yet)  
+- **Authentication:** JWT (planned)  
+- **Extra:** Docker & docker-compose (planned, not implemented due to time)  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✅ Features Implemented / In Progress
+- [ ] Project initialized (frontend + backend structure created)  
+- [ ] Register & Login (in progress, currently facing errors when running backend)  
+- [ ] Board CRUD (not implemented)  
+- [ ] Column CRUD (not implemented)  
+- [ ] Task CRUD + Drag & Drop (not implemented)  
+- [ ] Invite members (not implemented)  
+- [ ] Notifications (optional, not implemented)  
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ⚠️ Current Issues
+- Backend server does not run correctly (error when starting Express + DB connection).  
+- Authentication logic partially written but not fully tested.  
+- Database schema created, but migrations/setup not yet integrated.  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📌 What I Planned to Do Next (If I Had More Time)
+1. Fix backend error (Express server + DB connection).  
+2. Complete Register & Login with bcrypt + JWT.  
+3. Implement Board/Column/Task CRUD.  
+4. Add Drag & Drop using `react-beautiful-dnd`.  
+5. Add invite & member management.  
+6. Containerize the app with Docker.  
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-=======
-# kanbanBoard
->>>>>>> 7755fa51b5044ff7e869618974f08ce7a5cd057c
+## 📝 Notes
+Although the project is incomplete, I focused on:
+- Setting up a **clear structure** for frontend/backend/database.  
+- Writing partial code for authentication.  
+- Researching how to implement drag-and-drop in React.  
+
+I am confident that with more time, I would be able to complete the missing features and fix the current errors.  
+
+## 🚨 Known Issues
+- **Frontend server cannot run yet**  
+  When trying to start the frontend with:
+
+```bash
+npm run dev
+npm ERR! Missing script: "dev"
+npm ERR! To see a list of scripts, run:
+npm ERR!   npm run
